@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now</title>
+    <style>
+        body {
+            background-color: black; /* Set overall background color to black */
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: blue; /* Blue background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        .form-container table {
+            width: 100%;
+        }
+        .form-container table td {
+            padding: 10px;
+        }
+        .form-container table input, .form-container table textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .form-container form input[type="submit"] {
+            background-color: black; /* Black background color for submit button */
+            color: white;
+            cursor: pointer;
+        }
+        .form-container form input[type="submit"]:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker black on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form>
+        <h2>Join Now</h2>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" placeholder="Email"></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="tel" placeholder="Phone"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="text" placeholder="Gender"></td>
+            </tr>
+            <tr>
+                <td>Nationality</td>
+                <td><input type="text" placeholder="Nationality"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type="number" placeholder="Age"></td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td><input type="number" placeholder="Weight"></td>
+            </tr>
+            <tr>
+                <td>Goals</td>
+                <td><textarea placeholder="What are your goals?"></textarea></td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

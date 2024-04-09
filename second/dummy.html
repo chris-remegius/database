@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Center Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Style the blocks */
+        .block {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style the images within the blocks */
+        .block img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Style the text content */
+        .text-content {
+            flex: 1;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Fitness Center</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#training">Training</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#join">Join</a></li>
+            <li><button><a href="#free-pass" id="free-pass-btn">Free Pass</a></button></li>
+            <li><button id="join-now-btn">Join Now</button></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Video Section -->
+        <section class="block video-section">
+            <video src="video.mp4" autoplay muted loop></video>
+        </section>
+
+        <!-- Expert Training Section -->
+        <section class="block expert-training">
+            <div class="expert-training-content">
+                <h1>Expert Personal Training</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra orci eu massa vulputate,
+                    vitae
+                    fermentum urna rhoncus. Cras varius enim nec odio commodo, in mattis arcu blandit.</p>
+            </div>
+            <div class="expert-training-image">
+                <img src="gym4.png" alt="Trainer Image">
+            </div>
+        </section>
+
+        <!-- Gym1 Image Section -->
+        <section class="block">
+            <div>
+                <img src="gym1.jpg" alt="Gym1 Image">
+            </div>
+            <div class="text-content">
+                <h2>Gym Facilities</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra orci eu massa vulputate, vitae
+                    fermentum urna rhoncus. Cras varius enim nec odio commodo, in mattis arcu blandit.</p>
+            </div>
+        </section>
+
+        <!-- New Picture Section -->
+        <section class="block">
+            <div class="text-content">
+                <h2>New Section</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra orci eu massa vulputate, vitae
+                    fermentum urna rhoncus. Cras varius enim nec odio commodo, in mattis arcu blandit.</p>
+            </div>
+            <div>
+                <img src="gym3.png" alt="Left Picture">
+            </div>
+        </section>
+
+        <!-- Sign-in Bar -->
+        <div class="signin-bar" id="signin-bar">
+            <div class="close-btn" id="close-btn">X</div>
+            <h2>Sign in for Free Pass</h2>
+            <div class="image-container">
+                <img src="your-image.jpg" alt="Image">
+            </div>
+            <form action="/signup" method="POST">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="checkbox" id="show-password"> Show Password
+                <button type="submit">Submit</button>
+            </form>
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Fitness Center</p>
+        </footer>
+
+        <!-- JavaScript for Sign-in Bar -->
+        <script>
+            const freePassBtn = document.getElementById('free-pass-btn');
+            const signinBar = document.getElementById('signin-bar');
+            const closeBtn = document.getElementById('close-btn');
+            const joinNowBtn = document.getElementById('join-now-btn');
+
+            freePassBtn.addEventListener('click', function () {
+                signinBar.style.right = '0';
+            });
+
+            if (joinNowBtn) {
+                joinNowBtn.addEventListener('click', function () {
+                    signinBar.style.right = '0';
+                });
+            }
+
+            closeBtn.addEventListener('click', function () {
+                signinBar.style.right = '-100%';
+            });
+
+            const showPasswordCheckbox = document.getElementById('show-password');
+            const passwordInput = document.querySelector('input[type="password"]');
+
+            showPasswordCheckbox.addEventListener('change', function () {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                } else {
+                    passwordInput.type = 'password';
+                }
+            });
+        </script>
+</body>
+
+</html>

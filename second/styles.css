@@ -1,0 +1,151 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul li button {
+    padding: 10px 20px;
+    background-color: #ff4500;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    height: 400px;
+}
+
+.video-section video,
+.video-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Expert Training Section */
+.expert-training {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.expert-training-content {
+    flex: 1;
+    text-align: left;
+}
+
+.expert-training-image img {
+    width: 50%;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sign-in Bar */
+.signin-bar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-out;
+}
+
+.signin-bar h2 {
+    margin-bottom: 20px;
+}
+
+.signin-bar form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-bar input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signin-bar button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.signin-bar button:hover {
+    background-color: #555;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Image Container */
+.image-container {
+    margin-bottom: 50px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
